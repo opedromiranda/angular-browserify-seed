@@ -1,4 +1,4 @@
-// http://viget.com/extend/gulp-browserify-starter-faq
+// shout out to http://viget.com/extend/gulp-browserify-starter-faq
 
 var gulp = require('gulp');
 
