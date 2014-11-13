@@ -23,7 +23,5 @@ module.exports = function() {
 
     lrserver.listen(livereloadport);
 
-    gulp.run('watch');
-
     console.log('Server running on http://localhost:5000');
 };

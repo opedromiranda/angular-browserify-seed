@@ -3,7 +3,8 @@ var gulp = require('./gulp')([
     'jshint',
     'views',
     'serve',
-    'test'
+    'test',
+    'images'
 ]);
 
 
@@ -12,6 +13,9 @@ gulp.task('watch', ['jshint'], function() {
         ['jshint','browserify']);
 
     gulp.watch(['app/index.html', 'app/views/**/*.html'], ['views']);
+
 });
 
-gulp.task('build', ['test', 'jshint', 'browserify', 'views']);
+gulp.task('build', ['test', 'jshint', 'browserify', 'views', 'images']);
+
+gulp.task('start', ['images', 'watch', 'serve']);
