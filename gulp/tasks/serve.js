@@ -14,7 +14,7 @@ server.use(livereload({port: livereloadport}));
 server.use(express.static('./build'));
 
 server.all('/*', function(req, res) {
-    res.sendfile('index.html', { root: 'build' });
+    res.sendFile('index.html', { root: 'build' });
 });
 
 module.exports = function() {
@@ -24,4 +24,6 @@ module.exports = function() {
     lrserver.listen(livereloadport);
 
     gulp.run('watch');
+
+    console.log('Server running on http://localhost:5000');
 };
