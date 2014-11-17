@@ -11,4 +11,15 @@ angular.module('ngApp', [
     'ngApp.controllers',
     'ngApp.services',
     'ngApp.factories'
-]);
+])
+.config(['$stateProvider', '$urlRouterProvider',
+    function ($stateProvider,   $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+                .state('home', {
+                    url: '/',
+                    templateUrl: 'views/home.html'
+                });
+
+    }]);
