@@ -18,4 +18,4 @@ gulp.task('watch', ['jshint'], function() {
 
 gulp.task('build', ['test', 'jshint', 'browserify', 'views', 'images']);
 
-gulp.task('start', ['images', 'views', 'watch', 'serve']);
+gulp.task('start', ['browserify', 'images', 'views', 'watch', 'serve']);
