@@ -15,7 +15,7 @@ module.exports = function(config) {
 
         plugins: [
             'karma-jasmine',
-            'karma-bro',
+            'karma-browserify',
             'karma-phantomjs-launcher',
             'karma-coverage'
         ],
