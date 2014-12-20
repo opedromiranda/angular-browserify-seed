@@ -8,5 +8,5 @@ module.exports = function() {
         //Pass desired output filename to vinyl-source-stream
         .pipe(source('bundle.js'))
         // Start piping stream to tasks!
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./build/scripts'));
 };
