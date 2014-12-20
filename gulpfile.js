@@ -16,6 +16,6 @@ gulp.task('watch', ['jshint'], function() {
 
 });
 
-gulp.task('build', ['test', 'jshint', 'browserify', 'views', 'images']);
+gulp.task('build', ['test', 'jshint', 'browserify', 'views', 'styles', 'images']);
 
-gulp.task('start', ['browserify', 'images', 'views', 'watch', 'serve']);
+gulp.task('start', ['browserify', 'images', 'views', 'styles', 'watch', 'serve']);

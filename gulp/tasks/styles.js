@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
-var notify = require('gulp-notify');
 var rename = require('gulp-rename');
 
 module.exports = function() {
@@ -15,6 +14,5 @@ module.exports = function() {
         .pipe(gulp.dest('build'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss(''))
-        .pipe(gulp.dest('build'))
-        .pipe(notify({ message: 'Styles task complete' }));
+        .pipe(gulp.dest('build'));
 };
