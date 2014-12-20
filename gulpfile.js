@@ -12,6 +12,9 @@ gulp.task('watch', ['jshint'], function() {
     gulp.watch(['app/scripts/*.js', 'app/scripts/**/*.js'],
         ['jshint','browserify']);
 
+    gulp.watch(['app/styles/*.scss'],
+        ['styles']);
+
     gulp.watch(['app/index.html', 'app/views/**/*.html'], ['views']);
 
 });
