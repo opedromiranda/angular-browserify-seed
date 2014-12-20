@@ -4,9 +4,9 @@ var gulp = require('./gulp')([
     'views',
     'serve',
     'test',
-    'images'
+    'images',
+    'styles'
 ]);
-
 
 gulp.task('watch', ['jshint'], function() {
     gulp.watch(['app/scripts/*.js', 'app/scripts/**/*.js'],

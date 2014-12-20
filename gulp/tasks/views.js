@@ -6,4 +6,4 @@ module.exports = function() {
 
     gulp.src('./app/views/**/*')
         .pipe(gulp.dest('build/views/'));
-}
+};
