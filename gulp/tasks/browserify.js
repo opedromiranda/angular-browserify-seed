@@ -1,12 +1,10 @@
-var browserify = require('browserify');
+var browserify = require('gulp-browserify');
 var gulp = require('gulp');
-var source = require('vinyl-source-stream');
 
 module.exports = function() {
-    return browserify('./app/scripts/main.js')
-        .bundle()
-        //Pass desired output filename to vinyl-source-stream
-        .pipe(source('bundle.js'))
-        // Start piping stream to tasks!
-        .pipe(gulp.dest('./build/scripts'));
+    return gulp.src('./app/scripts/main.js')
+            .pipe(browserify({
+              debug : true
+            }))
+        .pipe(gulp.dest('./build/scripts/'))
 };
